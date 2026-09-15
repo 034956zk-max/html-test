@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IZ Academy | CIT & DIT Courses</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#172033;
+}
+
+header{
+    background:#123c69;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1976a8);
+    color:white;
+    padding:80px 7%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:white;
+    color:#123c69;
+    padding:13px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 7%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#123c69;
+    margin-bottom:12px;
+}
+
+.card p{
+    line-height:1.6;
+    color:#596579;
+}
+
+.card button{
+    border:0;
+    background:#123c69;
+    color:white;
+    padding:11px 18px;
+    border-radius:7px;
+    margin-top:18px;
+    cursor:pointer;
+}
+
+.lesson{
+    margin-top:12px;
+    padding:12px;
+    background:#eef4fa;
+    border-radius:7px;
+}
+
+.question-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+input, textarea{
+    width:100%;
+    padding:13px;
+    margin-top:8px;
+    margin-bottom:18px;
+    border:1px solid #ccd3df;
+    border-radius:7px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.submit{
+    background:#123c69;
+    color:white;
+    border:0;
+    padding:13px 25px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:700px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:13px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎓 IZ Academy</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#questions">Questions</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+
+<section class="hero" id="home">
+
+    <h1>Learn CIT & DIT Online</h1>
+
+    <p>
+        Welcome to IZ Academy — a simple online learning platform
+        for students who want to learn Computer Information Technology
+        and Diploma in Information Technology.
+    </p>
+
+    <a class="btn" href="#courses">Explore Courses</a>
+
+</section>
+
+
+<section id="courses">
+
+    <h2 class="section-title">Our Courses</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>💻 CIT Course</h3>
+
+            <p>
+                Learn basic computer skills, MS Office,
+                internet, typing and essential IT concepts.
+            </p>
+
+            <div class="lesson">
+                📘 Lesson 1 — Introduction to Computer
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 2 — MS Word
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 3 — MS Excel
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 4 — Internet Basics
+            </div>
+
+            <button onclick="showMessage('CIT course selected!')">
+                Start CIT
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🖥️ DIT Course</h3>
+
+            <p>
+                Learn advanced computer concepts,
+                programming basics, databases,
+                networking and web development.
+            </p>
+
+            <div class="lesson">
+                📘 Lesson 1 — Computer Fundamentals
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 2 — Programming Basics
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 3 — Database
+            </div>
+
+            <div class="lesson">
+                📘 Lesson 4 — Web Development
+            </div>
+
+            <button onclick="showMessage('DIT course selected!')">
+                Start DIT
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="questions">
+
+    <h2 class="section-title">
+        Ask a Question
+    </h2>
+
+    <div class="question-box">
+
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Your Question</label>
+        <textarea id="question"
+        placeholder="Write your CIT or DIT question here..."></textarea>
+
+        <button class="submit" onclick="submitQuestion()">
+            Submit Question
+        </button>
+
+        <p id="result" style="margin-top:20px;"></p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">
+        📝 Practice Quiz
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Computer Basics</h3>
+
+            <p>
+                Which device is used to enter text into a computer?
+            </p>
+
+            <button onclick="checkAnswer('wrong')">
+                Monitor
+            </button>
+
+            <button onclick="checkAnswer('correct')">
+                Keyboard
+            </button>
+
+            <p id="quizResult" style="margin-top:15px;"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <h2 class="section-title">
+        About IZ Academy
+    </h2>
+
+    <div class="question-box">
+
+        <p style="line-height:1.8;">
+            IZ Academy is an educational platform designed to help
+            students learn computer and IT skills through simple
+            lessons, courses and practice questions.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 IZ Academy</p>
+    <p style="margin-top:8px;">
+        Learn • Practice • Grow
+    </p>
+
+</footer>
+
+
+<script>
+
+function showMessage(message){
+
+    alert(message);
+
+}
+
+
+function submitQuestion(){
+
+    let name = document.getElementById("name").value;
+    let question = document.getElementById("question").value;
+    let result = document.getElementById("result");
+
+    if(name === "" || question === ""){
+
+        result.innerHTML =
+        "⚠️ Please enter your name and question.";
+
+        result.style.color = "red";
+
+        return;
+    }
+
+    result.innerHTML =
+    "✅ Your question has been received! (Demo version)";
+
+    result.style.color = "green";
+
+}
+
+
+function checkAnswer(answer){
+
+    let result = document.getElementById("quizResult");
+
+    if(answer === "correct"){
+
+        result.innerHTML = "✅ Correct Answer!";
+
+        result.style.color = "green";
+
+    }else{
+
+        result.innerHTML = "❌ Try again!";
+
+        result.style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
